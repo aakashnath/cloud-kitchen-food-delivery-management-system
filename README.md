@@ -1,128 +1,396 @@
-# 🍔 Cloud Kitchen & Food Delivery Management System (MySQL edition)
+<div align="center">
 
-A full SQL project modeled on real-world platforms like **Swiggy, Zomato, and EatClub** —
-with a normalized relational schema, a business-logic trigger, reporting views, and a
-Streamlit dashboard front-end. This version runs on **MySQL** (converted from an
-original SQLite implementation).
+# 🍔 Cloud Kitchen & Food Delivery Management System
 
-## Project structure
+### A MySQL-Based Database Management System with an Interactive Streamlit Analytics Dashboard
 
+![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+A complete Database Management System inspired by modern food delivery platforms such as **Swiggy**, **Zomato**, and **EatClub**, featuring a normalized MySQL database, business automation using SQL triggers, reporting views, and an interactive Streamlit dashboard.
+
+</div>
+
+---
+
+# 📌 Project Overview
+
+The **Cloud Kitchen & Food Delivery Management System** is a real-world DBMS project designed to simulate the backend operations of an online food delivery platform.
+
+The project demonstrates how relational databases can efficiently manage restaurants, customers, menus, orders, payments, deliveries, ratings, and business reporting while maintaining data consistency and integrity.
+
+To enhance user experience, the database is integrated with a **Streamlit Analytics Dashboard** that provides real-time insights through interactive visualizations and SQL-powered reports.
+
+---
+
+# 🎯 Project Objectives
+
+- Design a normalized relational database.
+- Manage restaurants, menus, customers, and drivers.
+- Process customer orders efficiently.
+- Track payments and deliveries.
+- Automate business operations using SQL Triggers.
+- Generate reports using SQL Views.
+- Visualize business insights through an interactive dashboard.
+- Demonstrate real-world database design concepts.
+
+---
+
+# 🏗 Project Workflow
+
+```text
+Customer Registration
+        │
+        ▼
+Browse Restaurants & Menu
+        │
+        ▼
+Place Order
+        │
+        ▼
+Payment Processing
+        │
+        ▼
+Delivery Assignment
+        │
+        ▼
+Order Delivered
+        │
+        ▼
+Restaurant Rating Updated
+        │
+        ▼
+Analytics Dashboard
 ```
-cloud_kitchen_project/
-├── database/
-│   ├── schema.sql          -> Tables, triggers, views (MySQL DDL — run this first)
-│   ├── db_config.py         -> Shared MySQL connection config (env-driven)
-│   └── seed_data.py         -> Truncates + fills the DB with sample data
+
+---
+
+# ✨ Key Features
+
+✅ Restaurant Management
+
+✅ Customer Management
+
+✅ Menu Management
+
+✅ Order Processing
+
+✅ Payment Tracking
+
+✅ Delivery Management
+
+✅ Customer Ratings
+
+✅ Business Automation using SQL Triggers
+
+✅ SQL Reporting Views
+
+✅ Interactive Streamlit Dashboard
+
+✅ Custom SQL Query Execution
+
+✅ Entity Relationship Diagram
+
+---
+
+# 🛠 Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| MySQL 8+ | Database Management |
+| Python | Backend Programming |
+| Streamlit | Interactive Dashboard |
+| SQLAlchemy | Database Connectivity |
+| PyMySQL | MySQL Driver |
+| Plotly | Data Visualization |
+| Faker | Sample Data Generation |
+| Pandas | Data Analysis |
+
+---
+
+# 📂 Repository Structure
+
+```text
+cloud-kitchen-food-delivery-management-system
+│
 ├── app/
-│   └── app.py                -> Streamlit dashboard (front-end)
+│   └── app.py
+│
+├── database/
+│   ├── db_config.py
+│   ├── schema.sql
+│   └── seed_data.py
+│
+├── screenshots/
+│
+├── README.md
 ├── requirements.txt
-├── .env.example
-└── README.md
+└── .env.example
 ```
 
-## Prerequisites
+---
 
-- MySQL Server **8.0.16+** (needed for `CHECK` constraint enforcement)
-- Python 3.9+
+# 🗄 Database Design
 
-## How to run
+The project consists of **11 normalized tables**.
+
+| Table | Description |
+|--------|-------------|
+| Restaurants | Stores restaurant information |
+| Menus | Restaurant menu items |
+| Customers | Customer records |
+| Drivers | Delivery partner details |
+| Orders | Customer orders |
+| Order_Items | Ordered food items |
+| Payments | Payment transactions |
+| Deliveries | Delivery tracking |
+| Ratings | Customer reviews |
+| Coupons | Discount coupons |
+| Offers | Promotional offers |
+
+---
+
+# 🔥 SQL Trigger
+
+The database includes automated business logic using SQL Triggers.
+
+### Trigger Functionality
+
+- Detects completed deliveries.
+- Updates order status.
+- Adjusts restaurant ratings.
+- Maintains data consistency automatically.
+
+This demonstrates how business rules can be enforced directly within the database.
+
+---
+
+# 📊 SQL Views
+
+The project contains reporting views for business analytics.
+
+### Included Views
+
+- Today's Orders
+- Top Restaurants
+- Pending Deliveries
+
+These views simplify reporting and improve dashboard performance.
+
+---
+
+# 📈 Dashboard Modules
+
+The Streamlit dashboard provides multiple analytical pages.
+
+### 📊 Dashboard
+
+Business KPIs and overall performance.
+
+### 📈 Orders Trend
+
+Daily order trends and business growth.
+
+### 🕒 Today's Orders
+
+Orders placed today.
+
+### 🏆 Top Restaurants
+
+Best-performing restaurants based on ratings.
+
+### ⭐ Restaurant Ratings
+
+Restaurant performance visualization.
+
+### 🚚 Pending Deliveries
+
+Track active deliveries.
+
+### ⚡ Trigger Demonstration
+
+Visual demonstration of SQL Trigger execution.
+
+### 📂 Browse Tables
+
+View records from every database table.
+
+### 🧠 Custom SQL
+
+Execute SELECT queries directly from the dashboard.
+
+### 🗺 ER Diagram
+
+Visual representation of database relationships.
+
+---
+
+# 📸 Project Screenshots
+
+## 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 📈 Orders Trend
+
+![Orders Trend](screenshots/orders_trend.png)
+
+---
+
+## 🕒 Today's Orders
+
+![Today's Orders](screenshots/todays_orders.png)
+
+---
+
+## 🏆 Top Restaurants
+
+![Top Restaurants](screenshots/top_restaurants.png)
+
+---
+
+## ⭐ Restaurant Ratings
+
+![Restaurant Ratings](screenshots/restaurant_ratings.png)
+
+---
+
+## 🚚 Pending Deliveries
+
+![Pending Deliveries](screenshots/pending_deliveries.png)
+
+---
+
+## ⚡ Trigger Demo
+
+![Trigger Demo](screenshots/trigger_demo.png)
+
+---
+
+## 📂 Browse Tables
+
+![Browse Tables](screenshots/browse_tables.png)
+
+---
+
+## 🧠 Custom SQL
+
+![Custom SQL](screenshots/custom_sql.png)
+
+---
+
+## 🗺 Entity Relationship Diagram
+
+![ER Diagram](screenshots/er_diagram.png)
+
+---
+
+# ⚙ Installation
+
+Clone the repository
 
 ```bash
-# 1. Install dependencies
+git clone https://github.com/aakashnath/cloud-kitchen-food-delivery-management-system.git
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 2. Configure DB credentials
-cp .env.example .env
-# then edit .env with your MySQL host/user/password
+Configure database credentials
 
-# 3. Create the database, tables, triggers & views
-mysql -u <user> -p < database/schema.sql
+```text
+Create a .env file using .env.example
+```
 
-# 4. Seed it with sample data (60 customers, 15 restaurants, 220 orders, etc.)
+Create database
+
+```bash
+mysql -u root -p < database/schema.sql
+```
+
+Insert sample data
+
+```bash
 python database/seed_data.py
+```
 
-# 5. Launch the dashboard
+Launch dashboard
+
+```bash
 streamlit run app/app.py
 ```
 
-`seed_data.py` truncates existing rows and reseeds every time you run it — handy for
-resetting the "⚡ Trigger Demo" page once every delivery has been marked `Delivered`.
+---
 
-## Data model (11 tables)
+# 💡 Future Enhancements
 
-| Table | Purpose |
-|---|---|
-| `Restaurants` | Partner restaurants / cloud kitchens |
-| `Menus` | Menu items per restaurant |
-| `Customers` | End users placing orders |
-| `Drivers` | Delivery riders |
-| `Coupons` | Platform-wide discount codes |
-| `Offers` | Restaurant-specific promotions |
-| `Orders` | One row per customer order |
-| `Order_Items` | Line items linking Orders ↔ Menus (junction table) |
-| `Payments` | 1-to-1 with Orders |
-| `Deliveries` | 1-to-1 with Orders, linked to a Driver |
-| `Ratings` | Customer feedback after delivery |
+- User Authentication
+- Online Payment Gateway
+- Order Notifications
+- Admin Dashboard
+- Mobile Application
+- AI-based Restaurant Recommendation
+- Real-time Delivery Tracking
+- Cloud Deployment
 
-Full relational diagram is in `database/schema.sql` (foreign keys) and rendered as an
-ER diagram in the dashboard's "ER Model" tab.
+---
 
-## Trigger: `Order Delivered → Increase Restaurant Rating`
+# 🎓 Learning Outcomes
 
-Two triggers implement this business rule end-to-end:
+This project demonstrates practical knowledge of:
 
-1. **`trg_order_delivered_bump_rating`** — fires whenever a row in `Deliveries` is
-   updated; an `IF` inside the trigger body checks that `delivery_status` just flipped
-   to `'Delivered'` (MySQL has no `AFTER UPDATE OF <column>` clause like SQLite/Postgres,
-   so the column-changed check happens explicitly). It marks the parent `Orders.status`
-   as `'Delivered'` and gives the restaurant's live rating a small automatic bump
-   (capped at 5.0, via `LEAST()`) as an immediate "successful delivery" signal.
-2. **`trg_rating_recalc_restaurant_avg`** — fires when a customer actually submits a
-   star rating into `Ratings`. It recalculates the restaurant's `rating` as the true
-   average of every rating it has ever received, overriding the bump with the real number.
+- Database Management Systems
+- Relational Database Design
+- SQL Programming
+- Database Normalization
+- SQL Triggers
+- SQL Views
+- CRUD Operations
+- Data Visualization
+- Python Database Connectivity
+- Interactive Dashboard Development
 
-Try it live in the Streamlit app under **⚡ Trigger Demo** — pick a pending delivery,
-mark it delivered, and watch the restaurant's rating change in real time, driven entirely
-by the database trigger (no application code computes the new value).
+---
 
-## Views (reporting layer)
+# 👨‍💻 Authors
 
-| View | Description |
-|---|---|
-| `vw_todays_orders` | All orders placed today, with customer & restaurant names |
-| `vw_top_restaurants` | Restaurants ranked by rating, with order count & revenue |
-| `vw_pending_deliveries` | Deliveries not yet `Delivered` or `Cancelled` |
+**Aakash Nath**
 
-## Streamlit dashboard pages
+**Abhijit Roy**
 
-- **📊 Dashboard** — KPIs, order status split, revenue by cuisine, 30-day trend, payment mix
-- **🕒 Today's Orders** — live `vw_todays_orders`
-- **🏆 Top Restaurants** — live `vw_top_restaurants` + chart
-- **🚴 Pending Deliveries** — live `vw_pending_deliveries`
-- **⚡ Trigger Demo** — fire the delivery trigger and see the rating update
-- **🧾 Browse Tables** — raw table viewer for all 11 tables
-- **🧠 Run Custom SQL** — ad-hoc SELECT query console
-- **🗺️ ER Model** — relationship summary
+---
 
-## Tech stack
+# 🙏 Acknowledgement
 
-- **Database:** MySQL 8+ (schema uses `CHECK` constraints, `AUTO_INCREMENT`, `DELIMITER`-
-  based triggers, and standard views)
-- **Connectivity:** PyMySQL (raw DB-API for seeding), SQLAlchemy engine (for the app,
-  works cleanly with `pandas.read_sql_query`)
-- **Front-end:** Streamlit + Plotly
-- **Sample data:** Faker (60 customers, 15 restaurants, 134 menu items, 20 drivers,
-  220 orders with realistic order/payment/delivery/rating lifecycles)
+**Project Guide**
 
-## What changed from the SQLite version
+Mr. Amitava Chatterjee
 
-- `schema.sql`: `AUTOINCREMENT` → `AUTO_INCREMENT`, `REAL` → `DECIMAL`, added
-  `CREATE DATABASE`/`USE`, triggers rewritten with `DELIMITER $$ ... END$$` and an
-  `IF` for the column-change check, `date('now')` → `CURDATE()`.
-  `MIN(5.0, ...)` → `LEAST(5.0, ...)`.
-- `seed_data.py`: `sqlite3` → `pymysql`, `?` placeholders → `%s`, file-based DB reset
-  → `TRUNCATE TABLE` (schema/triggers are expected to already exist via `schema.sql`).
-- `app.py`: `sqlite3` connection → cached SQLAlchemy engine (`db_config.py`), same
-  `run_query`/`run_write` helper shape, `?` → `%s`, `date('now','-30 day')` →
-  `CURDATE() - INTERVAL 30 DAY`, startup check now pings the DB instead of checking
-  for a `.db` file.
+**Organization**
+
+Anudip Foundation – Centre of Excellence
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
+
+It helps motivate future development and supports the project.
+
+---
+
+<div align="center">
+
+## 🍽 Bringing Database Concepts to Life Through Real-World Food Delivery Analytics
+
+</div>
