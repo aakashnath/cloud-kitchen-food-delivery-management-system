@@ -361,7 +361,7 @@ This project demonstrates practical knowledge of:
 
 ---
 
-# 👨‍💻 Authors
+# 👨‍💻 Developed By
 
 **Aakash Nath**
 
@@ -369,23 +369,9 @@ This project demonstrates practical knowledge of:
 
 ---
 
-# 🙏 Acknowledgement
-
-**Project Guide**
-
-Mr. Amitava Chatterjee
-
-**Organization**
-
-Anudip Foundation – Centre of Excellence
-
----
-
 # ⭐ Support
 
-If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
-
-It helps motivate future development and supports the project.
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
 ---
 
