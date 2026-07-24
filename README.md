@@ -126,10 +126,24 @@ cloud-kitchen-food-delivery-management-system
 │   └── seed_data.py
 │
 ├── screenshots/
+│   ├── dashboard.png
+│   ├── orders_trend.png
+│   ├── todays_orders.png
+│   ├── top_restaurants.png
+│   ├── restaurant_ratings.png
+│   ├── pending_deliveries.png
+│   ├── trigger_demo.png
+│   ├── browse_tables.png
+│   ├── custom_sql.png
+│   └── er_diagram.png
 │
+├── queries.sql
+├── LICENSE
 ├── README.md
 ├── requirements.txt
-└── .env.example
+├── .env.example
+├── Cloud Kitchen Project Report.pdf
+└── Cloud Kitchen Project.pptx
 ```
 
 ---
@@ -323,6 +337,12 @@ Insert sample data
 python database/seed_data.py
 ```
 
+(Optional) Explore sample SQL queries:
+
+```sql
+Open queries.sql in MySQL Workbench or VS Code to execute sample SELECT, JOIN, GROUP BY, reporting, and view queries.
+```
+
 Launch dashboard
 
 ```bash
@@ -330,7 +350,34 @@ streamlit run app/app.py
 ```
 
 ---
+---
 
+# 📝 Sample SQL Queries
+
+The repository includes a dedicated **queries.sql** file containing practical SQL queries for demonstration and learning purposes.
+
+It covers:
+
+- SELECT Statements
+- WHERE Clause
+- ORDER BY
+- GROUP BY
+- INNER JOIN
+- Aggregate Functions
+- SQL Views
+- Reporting Queries
+
+Example:
+
+```sql
+SELECT restaurant_name, rating
+FROM Restaurants
+ORDER BY rating DESC;
+```
+
+For additional queries, refer to **queries.sql**.
+
+---
 # 💡 Future Enhancements
 
 - User Authentication
@@ -363,9 +410,9 @@ This project demonstrates practical knowledge of:
 
 # 👨‍💻 Developed By
 
-**Aakash Nath**
+### 👤 Aakash Nath
 
-**Abhijit Roy**
+### 👤 Abhijit Roy
 
 ---
 
